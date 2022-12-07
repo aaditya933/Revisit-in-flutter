@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/pages/login_page.dart';
+import 'package:flutter_projects/utils/routes.dart';
 import 'pages/home_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -21,12 +22,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
+      // debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(brightness: Brightness.dark),
       initialRoute: "/login",
       routes: {
-        "/": (context) => LoginPage(), // iska  / kamatlab hi home h
-        "/home": (context) => HomePage(),
-        "/login": (context) => LoginPage()
+        "/": (context) => LoginPage(), // iska  / ka matlab hi home h
+        MyRoute.homeRoute: (context) => HomePage(),
+        MyRoute.loginRoute: (context) => LoginPage()
       },
       //Required property for darktheme
     );
