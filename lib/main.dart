@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       ),
       // debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(brightness: Brightness.dark),
-      initialRoute: "/login",
+      // initialRoute: "/login",
       routes: {
         "/": (context) => LoginPage(), // iska  / ka matlab hi home h
         MyRoute.homeRoute: (context) => HomePage(),
